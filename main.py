@@ -138,10 +138,17 @@ def blog():
 def new_post():
 
     if request.method == 'POST':
-
         title = request.form['title']
-        pub_date = datetime.utcnow()
         body = request.form['blog']
+
+        if title =="":
+            flash('Please add a title to your blog')
+            return redirect('/new-post')
+        if body=="":
+            flash('Please add content to your blog')
+            return redirect('/new-post')
+
+        pub_date = datetime.utcnow()
         user = User.query.filter_by(email=session['email']).first()
         owner_id = user.id
         new_blog = Blog(title=title, body=body, pub_date=pub_date, owner_id=owner_id)

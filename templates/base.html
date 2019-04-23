@@ -1,26 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>{{title}}</title>
-        <style>
-            .error {
-                color: red
-            }
-        </style>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" type="text/css" href="./style.css" media='all'/>
     </head>
+    <title>{{title}}</title>
 <body>
-
+    <button class="redbutton">testing</button>
     {% if session %}
     <div>
         <a href="/" role="button">
-        <button>Main Blog Page</button>
+        <button class="redbutton">Main Blog Page</button>
         </a>|
         <a href="/new-post" role="button">
-            <button>Add a Blog Entry</button>
+            <button class="redbutton">Add a Blog Entry</button>
             </a>|
         <a href='/logout' role="button">
-            <button>Log Out</button>
+            <button class="redbutton" >Log Out</button>
         </a>
     </div>
     {% endif %}

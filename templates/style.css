@@ -1,14 +1,14 @@
-/*Makes the logout link a button*/
-.button {
-    background-color: Crimson;  
-    border-radius: 5px;
+.redbutton {
+    background: Crimson;  
     color: white;
     padding: .5em;
     text-decoration: none;
   }
+  .error {
+    color: red;
+  }
   
-  .button:focus,
-  .button:hover {
-    background-color: FireBrick;
+  .buttonhover {
+    background: FireBrick;
     color: White;
   }
